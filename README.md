@@ -1,5 +1,3 @@
-# MY-PORTFOLIO
-WENDOSEN BELAY DIGITAL JOB APPLICATION FILES 
 <!DOCTYPE html>
 <html lang="en">
 <head>
