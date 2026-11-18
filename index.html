@@ -34,6 +34,26 @@
       background: var(--primary);
       color: #ffffff;
       padding: 2.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+    .header-info {
+      flex: 1;
+    }
+    .profile-photo-wrapper {
+      flex-shrink: 0;
+    }
+    .profile-photo {
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+      background-color: #2b4c7e;
     }
     header h1 {
       font-size: 2rem;
@@ -48,7 +68,7 @@
     .contact-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem 1.5rem;
+      gap: 0.75rem 1.4rem;
       font-size: 0.92rem;
     }
     .contact-bar a { color: #93c5fd; text-decoration: none; }
@@ -123,6 +143,19 @@
       font-size: 0.85rem;
       color: var(--muted);
     }
+    @media (max-width: 720px) {
+      header {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .contact-bar, .actions {
+        justify-content: center;
+      }
+      .profile-photo {
+        width: 125px;
+        height: 125px;
+      }
+    }
     @media print {
       body { background: #fff; padding: 0; }
       .container { box-shadow: none; }
@@ -133,18 +166,24 @@
 <body>
   <div class="container">
     <header>
-      <h1>WENDOSEN BELAY NEGASH</h1>
-      <div class="subtitle">IT Specialist | System Administrator &amp; Advanced IT Instructor</div>
-      <div class="contact-bar">
-        <span>📍 Addis Ababa, Ethiopia</span>
-        <span>📞 +251-910-671399</span>
-        <span>📧 <a href="mailto:Wendosenbelay1@gmail.com">Wendosenbelay1@gmail.com</a></span>
-        <span>🔗 <a href="https://linkedin.com/in/wendosen-belay" target="_blank">LinkedIn</a></span>
-        <span>💻 <a href="https://github.com/wendeson99" target="_blank">GitHub</a></span>
+      <div class="header-info">
+        <h1>WENDOSEN BELAY NEGASH</h1>
+        <div class="subtitle">IT Specialist | System Administrator &amp; Advanced IT Instructor</div>
+        <div class="contact-bar">
+          <span>📍 Addis Ababa, Ethiopia</span>
+          <span>📞 +251-910-671399</span>
+          <span>📧 <a href="mailto:Wendosenbelay1@gmail.com">Wendosenbelay1@gmail.com</a></span>
+          <span>🔗 <a href="https://linkedin.com/in/wendosen-belay" target="_blank">LinkedIn</a></span>
+          <span>💻 <a href="https://github.com/wendeson99" target="_blank">GitHub</a></span>
+        </div>
+        <div class="actions">
+          <a href="Wendeson_Belay_Negash_CV.pdf" class="btn btn-primary" download>Download PDF CV</a>
+          <a href="mailto:Wendosenbelay1@gmail.com" class="btn btn-outline">Contact Me</a>
+        </div>
       </div>
-      <div class="actions">
-        <a href="Wendeson_Belay_Negash_CV.pdf" class="btn btn-primary" download>Download PDF CV</a>
-        <a href="mailto:Wendosenbelay1@gmail.com" class="btn btn-outline">Contact Me</a>
+
+      <div class="profile-photo-wrapper">
+        <img src="profile.jpg" alt="Wendeson Belay Negash" class="profile-photo" />
       </div>
     </header>
 
